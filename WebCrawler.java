@@ -22,24 +22,24 @@ public class WebCrawler {
     // 用于存储已经处理过的URL集合，避免重复爬取
     private Set<String> seenUrls = new HashSet<>();
 
-    // 最大URL数量限制
-    private static final int MAX_URLS = 70000;
+    // 最大URL数量限制（自行修改MAX_URLS的值达到合适的网页数量）
+    private static final int MAX_URLS = 70000;  
 
     // 数据库连接URL，用户名和密码
-    private static final String DB_URL = "jdbc:mysql://localhost/topic-search?user=root&password=mysql088925";
+    private static final String DB_URL = "jdbc:mysql://localhost/topic-search?user=你的用户名&password=你的密码";
 
-    // SQL插入语句
+    // SQL插入语句（插入你想要的字段）
     private static final String INSERT_SQL = "INSERT INTO crawled_url_rank (url, title, description, keywords, detail, content, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
     // 用户代理信息，模拟浏览器
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3";
 
-    // 爬取延迟，以毫秒为单位
+    // 爬取延迟，以毫秒为单位（设置合适的爬取延迟，对于比较大的网站建议设置较长的延迟）
     private static final int CRAWL_DELAY_MS = 500;
 
     // Cookie信息，可以用于模拟登录状态
-    private static final String COOKIE = "__gads=ID=1f6ec9259c54503d:T=1699844022:RT=1699844022:S=ALNI_MYDaTPw12VyMMcbsLbdV53nQ2JajQ; __gpi=UID=00000c855b1eab25:T=1699844022:RT=1699844022:S=ALNI_Mbvui6ifAJZzJfA54yTnR3pAhvPBw; __tins__15909999=%7B%22sid%22%3A%201703094545442%2C%20%22vd%22%3A%201%2C%20%22expires%22%3A%201703096345442%7D; __51cke__=; __51laig__=1; Hm_lvt_dcb5060fba0123ff56d253331f28db6a=1703094550; Hm_lpvt_dcb5060fba0123ff56d253331f28db6a=1703094550; ADback20170903=1";
-
+    private static final String COOKIE = " 这里是你的cookie "
+    
     // 构造函数，接受种子URL作为参数，并初始化队列和已处理URL集合
     public WebCrawler(String seedUrl) {
         if (isValidUrl(seedUrl)) {
@@ -58,7 +58,7 @@ public class WebCrawler {
         }
     }
 
-    // 判断是否应该爬取特定的URL，这里使用正则表达式匹配URL
+    // 判断是否应该爬取特定的URL，这里使用正则表达式匹配URL（根据需要修改）
     private boolean shouldCrawlUrl(String url) {
         return url.matches("https://www.gamersky.com/z/.*/") ||
                 url.matches("https://www.gamersky.com/z/.*/news/") ||
