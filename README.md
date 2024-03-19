@@ -14,4 +14,4 @@ Java实现的一个简单的本地的搜索引擎，希望可以帮助到你
 1.这是简单搜索的界面，实现关键词的查找
 ![简单搜索](https://github.com/Junqiao77/SearchEngine-game/blob/main/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2.jpg)
 2.这是高级搜索的界面，实现AND（或者OR，NOT的查询）
-![高级搜索]()
+![高级搜索](https://github.com/Junqiao77/SearchEngine-game/blob/main/%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2%E2%80%94AND.jpg)
