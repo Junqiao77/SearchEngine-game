@@ -11,4 +11,4 @@ Java实现的一个简单的本地的搜索引擎，希望可以帮助到你
 通过运行SearchEngine-GUI.java文件，一个简单的图形界面可以实现简单的搜索功能
 
 ### 效果如图
-![这是一个简单的搜索界面演示]（）
+![这是一个简单的搜索界面演示]（https://github.com/Junqiao77/SearchEngine-game/blob/main/%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2.jpg）
